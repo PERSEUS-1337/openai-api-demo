@@ -1,16 +1,24 @@
-# This is a sample Python script.
+import os
+from dotenv import load_dotenv
+import openai
 
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Load environment variables from the .env file
+load_dotenv()
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f"Hi, {name}")  # Press F9 to toggle the breakpoint.
+completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {
+            "role": "system",
+            "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.",
+        },
+        {
+            "role": "user",
+            "content": "Compose a poem that explains the concept of recursion in programming.",
+        },
+    ],
+)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == "__main__":
-    print_hi("PyCharm")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(completion)

@@ -4,7 +4,7 @@
     <option name="enabledOnReformat" value="true" />
     <option name="enabledOnSave" value="true" />
     <option name="pathToExecutable" value="C:\Users\ARBR\AppData\Local\Programs\Python\Python311\Scripts\black.exe" />
-    <option name="sdkUUID" value="7371480f-fbe2-4036-baf7-f0fa73f7adf6" />
+    <option name="sdkUUID" value="48450f2f-1981-43e2-94c1-f68df9206e80" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="openai-api-demo" project-jdk-type="Python SDK" />
 </project>
